@@ -35,7 +35,7 @@ export default {
   name: "App",
   setup() {
     const api_key = "ef869f08e57542f5b11175059220901";
-    const url = "http://api.weatherapi.com/v1/current.json";
+    const url = "https://api.weatherapi.com/v1/current.json";
     const city = ref("London");
     const data = reactive({
       name: "",
