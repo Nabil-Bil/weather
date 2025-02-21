@@ -4,17 +4,7 @@
       type="text"
       v-model.lazy="city"
       placeholder="Search ..."
-      class="
-        w-96
-        h-10
-        bg-gray-100
-        text-lh
-        outline-none
-        px-4
-        py-2
-        rounded-tr-xl rounded-bl-xl
-        font-semibold
-      "
+      class="w-96 h-10 bg-gray-100 text-lh outline-none px-4 py-2 rounded-tr-xl rounded-bl-xl font-semibold"
     />
     <div class="mt-10 text-center text-gray-50">
       <h1 class="text-2xl font-bold">{{ name }},{{ region }}</h1>
@@ -34,7 +24,7 @@ import axios from "axios";
 export default {
   name: "App",
   setup() {
-    const api_key = "ef869f08e57542f5b11175059220901";
+    const api_key = process.env.VUE_APP_API_KEY;
     const url = "https://api.weatherapi.com/v1/current.json";
     const city = ref("London");
     const data = reactive({
